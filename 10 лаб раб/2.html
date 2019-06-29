@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+	<meta charset="utf-8">
+	<title>9(jQuery)</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+	<script type="text/javascript" src="jquery-ui.js" ></script>
+	<!--<script type="text/javascript" src="jquery-ui.min.js" ></script>--> 
+</head>
+
+<body>
+<div class="content">
+
+
+<!--движение за курсором-->
+<div class="quest-result draggable"> 
+	<img src="3.png">
+	<p>перетащите мышью область текста</p>
+</div>
+<!--функция движения за курсором-->
+<script>
+	$(function() {
+	$(".draggable *").draggable();
+	});
+</script>
+
+
+<!--движение вправо-->
+<div class="quest-result"> 
+	<img src="1.jpg" class="line-animation" onclick="animationLine()" style="position:relative;"><br/>
+</div>
+<!--функция движения вправо-->
+<script type="text/javascript">
+	function animationLine(){
+	$('.line-animation').animate({left: '400px'}, 1500, function(){$('.line-animation').animate({left: '0px'}, 500)});
+	}
+</script> 
+
+
+<!--движение по траектории-->
+<div class="quest-result">
+	<img src="4.jpg" class="line-animation-second" onclick="animationLine2()" style="position:relative;"><br/>
+</div>
+
+<script type="text/javascript">
+	function animationLine2(){
+	$('.line-animation-second').animate({left: '250px'}, 1500, function(){
+	$('.line-animation-second').animate({left: '125px', bottom: '50px'}, 1500, function(){
+	$('.line-animation-second').animate({left: '0px', bottom: '0px'}, 1500);
+	});
+	});
+}
+</script> 
+</div> 
+</body>
+</html>

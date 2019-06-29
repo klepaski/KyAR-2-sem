@@ -1,0 +1,47 @@
+﻿<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>2</title>
+</head>
+<body>
+	<a href="1.html">Страница 1</a>
+	<p></p>
+
+	<header>
+		<h1>Я, <mark>Демосюк Павел Алексеевич</mark>, изучаю HTML 5</h1>
+	</header>
+
+	<nav>
+		<form name="data">
+		<fieldset>
+		<legend>Данные</legend>
+			
+            <input type="text" name="name" value="Демосюк Павел Алексеевич" autofocus><br/>
+			<input type="email" name="email" value="pashkademosyuk@gmail.com"><br/>
+			<input type="url" placeholder="URL:"><br/>
+			<input type="tel" name="telf" value="+375298079572"><br/>
+			<input type="number" min="1" max="4" name="kurs" value="1"> Курс<br/>
+			<input type="text" value="ПОИТ-5" name="group"><br/>
+			<input type="range"><br/>
+			<input type="search" placeholder="Search:"><br/>
+			<input type="color"><br/>
+		</fieldset>		
+		</form>
+
+		<img src="3.jpg" width="200" height="200">
+		<figcaption>Моя замечательная фотография </figcaption>
+	</nav>
+
+	<footer>
+		<script type="text/javascript">
+			document.write("ФИО: " + document.forms["data"].name.value + "<br>"
+			 + "Номер: " + document.forms["data"].telf.value + "<br>"
+			 + "Email: " + document.forms["data"].email.value + "<br>"
+			 + "Курс: " + document.forms["data"].kurs.value + "<br>"
+			 + "Группа: " + document.forms["data"].group.value + "<br>");
+		</script>
+	</footer>
+
+</body>
+</html>

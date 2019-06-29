@@ -1,0 +1,141 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>5</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type='text/javascript'>
+
+
+    //Вывести на экран все тэги и их номера в коллекции all 
+    function fun1() {
+      alert("Задание 1\n Вывести на экран все теги и их номера в коллекции all");
+      for (i = 0; i < document.all.length; i++) {
+        var nom=i+1;
+        var child = document.all[i];
+        alert("№"+nom+"  "+child.tagName);
+        //alert(document.documentElement.nodeType);
+      }
+    }
+
+    //Вывести все дочерние элементы узла document.body 
+    function fun2() {
+      alert("Задание 2\n Вывести все дочерние элементы узла document.body");
+      for (var i = 0; i < document.body.childNodes.length; i+=2) {
+        alert(document.body.childNodes[i+1].tagName);
+      }
+    }
+
+    //Вывести в окно содержимое первого элемента span
+    function fun3() {
+      alert("Задание 3\n Вывести в окно содержимое первого элемента span");
+      for (var i = 0; i < document.all.length; i++) {
+        var child = document.all[i];
+        if (child.tagName == 'SPAN') {
+          alert("1) используя коллекцию ALL:\n"+document.all[i].innerHTML);
+          break;
+        }
+      }
+      var spanvl = document.getElementsByTagName("span")
+      alert("2) используя частную коллекцию (span)\n"+spanvl[0].innerHTML);
+  
+      var spanid = document.getElementById('id')
+      alert("3) используя идентификатор элемента:\n"+spanid.textContent);
+    }
+
+    //Организовать доступ к содержимому таблицы и посчитать средний балл
+    function fun4() {
+      var a = new Number(document.getElementById("ot1").innerHTML);
+      var b = new Number(document.getElementById("ot2").innerHTML);
+      var c = new Number(document.getElementById("ot3").innerHTML);
+      var sr=(a+b+c)/3;
+      alert("Средний балл = ("+a+"+"+b+"+"+c+")/3 = "+sr);
+    }
+
+
+  </script>
+</head>
+    
+    
+    <body bgcolor="ffebcd">
+    <h1> Я, <a href="2.html" first-letter:> Чистякова Юлия Александровна </a>
+    <br> изучаю <font color="#FF0000"> HTML </font> и CSS </h1>
+    
+    <h2> Косатка (млекопитающее) </h2>
+    
+    <block1>
+    <h3> Краткие сведения </h3>
+    <div><p> Косатка, или <span id="id" style="color:orange">кит-убийца</span> - млекопитающее из монотипичного рода касатки семейства дельфиновых.
+    <br> Они распространены по всему Мировому океану.
+    <br><span style="color:red">Косатки</span> питаются разнообразными животными, лишь некоторые особи 
+    специализируются на определенных видах. </p></div>
+    </block1>
+    
+    <block2>
+    <h3> Описание </h3>
+    <p> У косаток черная спина, белая грудь и бока и белое пятно позади глаз.
+    <br> Китята рождаются с желтоватым оттенком. </p>
+    <img src="killer-whale7.jpg">
+    </block2>
+        
+    <h2> Классификация касаток </h2>
+    <table border="2" bgcolor="oldlace">
+    <tr> <td>
+    <OL3>
+    <LI> отдел - хордовые </LI>
+    <LI> подтип - позвоночные </LI>
+    <LI> отряд китообразные </LI>
+    <LI> семейство дельфиновые </LI>
+    </OL3>
+    </td> </tr>
+    </table>
+
+    <h2> Итоги сессии </h2>
+<table border="1">
+<tr class="a">
+	<td> <center> ФИО </center> </td>
+	<td colspan=3> <a href="1.html"> Чистякова Юлия Александровна </a> </td>
+</tr>
+<tr class="a">
+	<td> <img src="я.jpg"> </td>
+	<td colspan=3> Адрес: г. Брест, ул. Колесника, д.4 кв. 54 </td>
+</tr>
+<tr class="b">
+	<td> <center> 1 семестр </center> </td>
+	<td> дата: </td>
+	<td> предмет: </td>
+	<td> оценка: </td>
+</tr>
+<tr class="c">
+	<td> </td>
+	<td> 31.12.2017 </td>
+	<td> ОАиП </td>
+	<td id="ot1"> 8 </td>
+</tr>
+<tr class="d">
+	<td> </td>
+	<td> 11.01.2018 </td>
+	<td> ОИТ </td>
+	<td id="ot2"> 9 </td>
+</tr>
+<tr class="e">
+	<td> </td>
+	<td> 16.01.2018 </td>
+	<td> Математика </td>
+	<td id="ot3"> 10 </td>
+</tr>
+</table>
+
+
+
+    
+<p> ЗАДАНИЯ </p>
+<input type="button" onclick="fun1()" value="Task 1" />
+<input type="button" onclick="fun2()" value="Task 2" />
+<input type="button" onclick="fun3()" value="Task 3" />
+<input type="button" onclick="fun4()" value="Task 4" />
+
+</body>
+</html>

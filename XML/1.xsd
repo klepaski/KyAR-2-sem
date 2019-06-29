@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FACULTY"> <!--опр. эл-т FACULTY-->
+    <xs:complexType><!--у FACULTY комплексный тип-->
+      <xs:sequence><!--к.тип - это послед. элементов-->
+              <xs:element name="University" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NAME" type="xs:string"/><!--у NAME строковый тип-->
+              <xs:element name="BALL" type="xs:string"/>
+              <xs:element name="NABOR" type="xs:string"/>
+              <xs:element name="CITY" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+       </xs:element>
+      </xs:sequence>
+      </xs:complexType>
+  </xs:element>
+</xs:schema>

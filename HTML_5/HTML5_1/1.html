@@ -1,0 +1,62 @@
+﻿<html>
+<head>
+	<meta charset="utf-8">
+	<title>1</title>
+</head>
+<body background="1.jpg" align=center>
+	
+	<a href="2.html">Моя вторая страница</a>
+
+	<center><h3>Я, <mark>Чистякова Юлия Александровна</mark>, изучаю HTML5</h3></center> 
+	<p></p>
+
+	<video src="1.mp4" width="640" height="480" controls="controls"></video>
+	<p></p>
+	<h3>Psapp - "Cosy in the rocket"</h3>
+	<audio src="1.mp3" controls="controls"></audio>
+	<p></p>
+
+	<script type="text/javascript">
+	function gps () {
+		navigator.geolocation.getCurrentPosition(show);
+	}
+	function show(position) {
+		document.write("Широта: " + position.coords.latitude + "<br>" 
+			+ "Долгота: " + position.coords.longitude + "<br>" 
+			+ "Точность определения широты и долготы: " + position.coords.accuracy + "<br>" 
+			+ "Точность определения высоты: " + position.coords.altitudeAccuracy + "<br>" 
+			+ "Направления пользователя в градусах: " + position.coords.heading + "<br>" 
+			+ "Cкорость перемещения в (м/c): " + position.coords.speed + "<br>");
+	}
+	</script>
+	<input type="button" value="Координаты" onclick="gps()">
+        
+
+
+
+	<canvas id="example" onclick="draw()"></canvas>
+	<script type="text/javascript">
+	function draw() {
+		var x = document.getElementById("example");
+      	var  x = example.getContext("2d");
+      	
+      	x.fillRect(50, 40, 70, 70); //закрашенный прямоугольник;
+      	x.strokeRect(150, 70, 55, 55);// не закрашенный прямоугольник
+      	x.clearRect(68, 57, 20, 20); // очищает зону
+      	x.shadowOffsetX = 3;
+      	x.shadowOffsetY = 3;
+      	x.shadowBlur = 5;
+      	x.shadowColor = "red";
+      	x.font = '14px Cursive';
+      	x.fillText("Чистякова Юлия", 50, 10);
+
+      	var grad = x.createLinearGradient(0,0,0,150);
+      	grad.addColorStop(0.0,"gold");  	
+      	grad.addColorStop(1.0,"pink");
+      	x.fillStyle = grad;
+
+	}
+	  	
+	</script>
+</body>
+</html>

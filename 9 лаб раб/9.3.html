@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>9.3</title>
+    <style>
+        #gizmo {
+            position: relative;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="gizmo" src="1.jpg">
+    <script>
+        gizmo.onclick = function () {
+            var start = Date.now();//нач. отсчета
+            var timer = setInterval(function () {
+                var timePassed = Date.now() - start;//сейчас минус нач.отсчета
+
+                gizmo.style.left = timePassed / 5 + 'px';
+                gizmo.style.top = 100 * Math.sin(timePassed / 5) + 'px';
+
+
+                if (timePassed > 2000) {
+                    gizmo.style.left = 0+"px";
+                    gizmo.style.top = 5+"px";
+                    clearInterval(timer);
+                }
+            }, 120);
+        }
+
+    </script>
+</body>
+</html>

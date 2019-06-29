@@ -1,0 +1,135 @@
+<html>
+<head>
+    <title>Лр №4</title>
+<meta charset="UTF-8" />
+<script>
+
+var Gruppa = function(num, spec, kolich, x, y) {//созд объекты
+    this.add_stud = function add_stud(x) { // добав x студентов
+        document.write("В группу " + this.num);
+        document.write(' добавили ' + this.x + ' студентов.<br\>');
+    }
+    this.sub_stud = function sub_stud(y) {  // искл y студентов
+        document.write("Из группы " + this.num);
+        document.write(' отчислено ' + this.y + ' студентов.<br\>');
+    }
+        this.num = num;
+    this.spec = spec;
+    this.x = x;
+    this.y = y;
+    this.kolich = kolich;
+}
+var gr1 = new Gruppa(2, 'ИСИТ', 28, 2, 5);//это сами объекты
+var gr2 = new Gruppa(3, 'ПОИТ', 32, 3, 1);
+var gr3 = new Gruppa(4, 'ДЭВИ', 25, 4, 0);
+var gr4 = new Gruppa(5, 'ПОИБМС', 30, 0, 2);
+
+
+function Gost(name, fam, dayin, dayout, type) {
+    this.name = name;
+    this.fam = fam;
+    this.dayin = dayin;
+    this.dayout=dayout
+    this.type = type;
+    this.like = true; // тру для всех объектов => нет в арг.ф.
+    this.z = dd(dayin,dayout);
+}
+var g1 = new Gost("Юлия", "Чистякова", 5, 6, "Люкс");
+var g2 = new Gost("Итан", "Каткоски", 7, 14, "Апартаменты");
+var g3 = new Gost("Леонид", "Зимов", 12, 23, "Эконом-класс");
+function dd(a,b) {return b-a;}
+   
+function fun1() {
+    document.write(" В группе номер " + gr1.num + " специальности ", gr1.spec + " ", gr1.kolich + " студентов " + "<br/>");
+    gr1.add_stud(gr1.x)
+    gr1.sub_stud(gr1.y)
+    document.write(" <br/>В группе номер " + gr2.num + " специальности ", gr2.spec + " ", gr2.kolich + " студентов " + "<br/>");
+    gr2.add_stud(gr2.x)
+    gr2.sub_stud(gr2.y)
+    document.write(" <br/>В группе номер " + gr3.num + " специальности ", gr3.spec + " ", gr3.kolich + " студентов " + "<br/>");
+    gr3.add_stud(gr3.x)
+    gr3.sub_stud(gr3.y)
+    document.write(" <br/>В группе номер " + gr4.num + " специальности ", gr4.spec + " ", gr4.kolich + " студентов " + "<br/>");
+    gr4.add_stud(gr4.x)
+    gr4.sub_stud(gr4.y)
+}
+
+function fun2() {
+    document.write("<table border=1>")
+        document.write("<tr>")
+            document.write("<td>"+"Гость:")
+            document.write("<td>"+"Приехал:")
+            document.write("<td>"+"Уехал:")
+            document.write("<td>"+"Понравилось?")
+            document.write("<td>"+"Тип размещения:")
+            document.write("<td>"+"Всего пробыл в отеле:")
+        document.write("<tr>")
+            document.write("<td>"+g1.name + " " + g1.fam);
+            document.write("<td>"+g1.dayin + ".03.2018");
+            document.write("<td>"+g1.dayout + ".03.2018");
+            document.write("<td>"+g1.like);
+            document.write("<td>"+g1.type);
+            document.write("<td>"+g1.z + " дней");
+        document.write("<tr>")
+            document.write("<td>"+g2.name + " " + g2.fam);
+            document.write("<td>"+g2.dayin + ".03.2018");
+            document.write("<td>"+g2.dayout + ".03.2018");
+            document.write("<td>"+g2.like);
+            document.write("<td>"+g2.type);
+            document.write("<td>"+g2.z + " дней");
+        document.write("<tr>")
+            document.write("<td>"+g3.name + " " + g3.fam);
+            document.write("<td>"+g3.dayin + ".03.2018");
+            document.write("<td>"+g3.dayout + ".03.2018");
+            document.write("<td>"+g3.like);
+            document.write("<td>"+g3.type);
+            document.write("<td>"+g3.z + " дней");
+    document.write("</table>")
+}
+
+function fun3(){
+    var MyStr = new String('abcdefg');
+    var MyArr = new Array(1,2,3,4,5,6,7,8,9,10);
+    
+    document.write("Исходный массив: " + MyArr +"<br/>");
+    delete MyArr[2];
+    document.write("Массив с удаленным 3 элементом: " + MyArr + "<br/><br/>");
+    
+    document.write("Есть ли 2-й элемент в массиве? " + (1 in MyArr) + "<br/>");
+    document.write("Есть ли метод 'age' в объекте 'gr1'? " + ('age' in gr1 )+ "<br/>");
+    document.write("Есть ли метод 'fam' в объекте 'g2'? " + ('fam' in g2)+ "<br/><br/>" );
+    
+    document.write("Является 'g3' объектом? " + (g3 instanceof Object)+ "<br/>" );
+    document.write("Является 'MyArr' массивом? " + (MyArr instanceof Array)+ "<br/>" );
+    document.write("Является 'Mystr' строкой? " + (MyStr instanceof String)+ "<br/><br/>" );
+    
+    function five() { return 5;}
+    document.write("<table border=1>")
+        document.write("<tr><td>"+"Объект:"+"<td>"+"Тип данных:")
+        document.write("<tr><td>"+"MyArr"+"<td>"+ typeof MyArr)
+        document.write("<tr><td>"+"MyStr"+"<td>"+ typeof MyStr)
+        document.write("<tr><td>"+"Функция five()"+"<td>"+ typeof five)
+        document.write("<tr><td>"+"Гость 1"+"<td>"+ typeof g1)
+        document.write("<tr><td>"+"Гость 2"+"<td>"+ typeof g2)
+        document.write("<tr><td>"+"Гость 3"+"<td>"+ typeof g3)
+        document.write("<tr><td>"+"Группа 1"+"<td>"+ typeof gr1)
+        document.write("<tr><td>"+"Группа 2"+"<td>"+ typeof gr2)
+        document.write("<tr><td>"+"Группа 3"+"<td>"+ typeof gr3)
+        document.write("<tr><td>"+"Группа 4"+"<td>"+ typeof gr4)
+    document.write("</table>")
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="Задание 1 " onclick="fun1()" />
+<br/>
+<br/>
+<input type="button" value="Задание 2 " onclick="fun2()" />
+<br/>
+<br/>
+<input type="button" value="Задание 3 " onclick="fun3()" />
+<br/>
+<br/>
+</body>
+</html>

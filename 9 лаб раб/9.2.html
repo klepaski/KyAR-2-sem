@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>9.2</title>
+
+    <style>
+        #gizmo {
+            position: relative;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="gizmo" src="1.jpg">
+     <script type="text/javascript">
+
+        gizmo.onclick = function func() { //при клике
+
+            var delay = 20;
+            var i = 0;
+
+            var startTimer = function () {
+                var elem = document.getElementById("gizmo");// сама картинка
+                
+                //возвр. смещение в px верхнего левого угла эл-та
+                Right = elem.offsetLeft;
+                console.log(Right); //?запис. в консоль браузера?
+
+                if (i < 10) {
+                    //1-вызов ф., 2-время задержки
+                    setTimeout(startTimer, delay);
+                    elem.style.left = Right + 20 + 'px';
+                }
+                i++;
+            }
+            var timer = setTimeout(startTimer, delay);
+        }
+
+    </script>
+</body>
+</html>

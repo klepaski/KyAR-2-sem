@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>9.4</title>
+    <script type="text/javascript">
+        function kvad() {
+            document.write("y=x^2");
+            document.write("<style>div{position:absolute}</style>");
+
+            //(x0;y0) в начале коорд.
+            w = 500; h = 500;
+            x0 = w / 2; y0 = h / 2;
+
+            //рисуем коорд. оси
+            for (i = 1; i < w; i+=8) document.write("<div style='top: " + y0 + " ; left: " + i + " '>_</div> ");//x
+            for (i = 1; i < h; i+=8) document.write("<div style='left: " + x0 + " ; top: " + i + " '>|</div> ");//y
+
+            kx = w / 70; ky = h / 70;
+            document.write("<font color=red>");
+
+            for (x = -5; x < 5; x+=0.01) {
+                y = Math.pow(x, 2);
+                document.write("<div style='left:" + (x0 + kx * x) + ";top:" + (y0 - ky * y + 3) + " '>.</div>");
+            }
+        }
+        function kub() {
+            document.write("y=x^3");
+            document.write("<style>div{position:absolute}</style>");
+
+            //(x0;y0) в начале коорд.
+            w = 500; h = 500;
+            x0 = w / 2; y0 = h / 2;
+
+            //рисуем коорд. оси
+            for (i = 1; i < w; i+=8) document.write("<div style='top: " + y0 + " ; left: " + i + " '>_</div> ");//x
+            for (i = 1; i < h; i+=8) document.write("<div style='left: " + x0 + " ; top: " + i + " '>|</div> ");//y
+
+            kx = w / 70; ky = h / 70;
+            document.write("<font color=red>");
+
+            for (x = -3.5; x < 3.5; x+=0.01) {
+                y = Math.pow(x, 3);
+                document.write("<div style='left:" + (x0 + kx * x) + ";top:" + (y0 - ky * y + 3) + " '>.</div>");
+            }
+        }
+        function sin() {
+            document.write("y=sin(x)");
+            document.write("<style>div{position:absolute}</style>");
+
+            //(x0;y0) - начало коорд.
+            var w = 500, h = 500;
+            x0 = w / 2; y0 = h / 2;
+
+            for (i = 1; i < w; i+=8) {
+                document.write("<div style='top: " + y0 + " ; left: " + i + " '>_</div>");
+            }
+            for (i = 1; i < h; i+=8) {
+                document.write("<div style='left: " + x0 + " ; top: " + i + " '>|</div>");
+            }
+            kx = w / 70; ky = h / 70;
+            document.write("<font color=pink>");
+
+            for (x = -20; x < 20; x = x + 0.01) {
+                y = Math.sin(x);
+                document.write("<div style='left:" + (x0 + kx * x) + ";top:" + (y0 - ky * y + 3) + " '>.</div>");
+            }
+        }
+        function cos() {
+            document.write("y=cos(x)");
+            document.write(" <style>div{position:absolute}</style> ");
+
+            w = 500; h = 500;
+            x0 = w/2; y0 = h/2;
+
+            for (i = 1; i < w; i+=8) document.write(" <div style='top: " + y0 + " ; left: " + i + " '>_</div> ");
+            for (i = 1; i < h; i+=8) document.write(" <div style='left: " + x0 + " ; top: " + i + " '>|</div> ");
+
+            kx = w / 70; ky = h / 70;
+            document.write("<font color=pink>");
+
+            for (x = -20; x < 20; x = x + 0.01) {
+                y = Math.cos(x);
+                document.write("<div style='left:" + (x0 + kx * x) + ";top:" + (y0 - ky * y + 3) + " '>.</div>");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <input type='radio' value='1' onclick='kvad()' />y=x^2
+    <input type='radio' value='2' onclick='kub()' />y=x^3
+    <input type='radio' value='3' onclick='sin()' />y=sinx
+    <input type='radio' value='4' onclick='cos()' />y=cosx
+</body>
+</html>

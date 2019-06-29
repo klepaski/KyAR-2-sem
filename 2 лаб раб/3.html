@@ -1,0 +1,25 @@
+<html>
+<head>
+   <title> Задание 3 (JS)</title> 
+</head>
+<body>
+<script type='text/javascript'>
+    a=prompt('Введите a:');
+    b=prompt('Введите b:');
+document.write("<table border= \"1\" cellspacing= \"0\" cellpadding= \"3\"align= \"center\">")
+    document.write("<tr><td>Радиус</td> <td>Площадь круга</td> <td>Длина окружности</td></tr>");
+    do {
+        var s=a*a*Math.PI;
+        var l=2*Math.PI*a;
+        document.write("<tr>");
+        document.write("<td>"+Math.round(a)+"</td>");
+        document.write("<td>"+Math.round(s)+"</td>");
+        document.write("<td>"+Math.round(l)+"</td>");
+        document.write("</tr>");
+        a++;
+    }
+    while (a<=b);
+    document.write("</table>")
+</script>
+</body>
+</html>

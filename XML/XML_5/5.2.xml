@@ -1,0 +1,9 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+	<student>
+		<all>
+      <name>Наталья</name>
+      <sname>Каспер</sname>
+      <spec>ПОИТ</spec>
+      <year>17</year>
+		</all>
+	</student>

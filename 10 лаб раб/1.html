@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>8(jQuery)</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type='text/javascript'>
+
+		$(document).ready(function(){
+		//при наведении изм. цвет
+		$("h1").mouseover(function(){$("h1").css("color","red")});
+		$("h1").mouseout(function () { $("h1").css("color", "black") });
+
+		//при нажатии изм. р-р
+		$("h2").click(function () { $("h2").css("fontSize", "35px") });
+
+		//при наведении 2.jpg, иначе 1.jpg
+		$("#q1").mouseover(function(){document.getElementById("q1").src="2.jpg"});
+		$("#q1").mouseout(function () { document.getElementById("q1").src = "1.jpg" });
+
+		//при нажатии, текст -> картинка
+		$("#q2").click(function () {document.getElementById("q2").innerHTML = "<img src='3.png'>" });
+
+		//при наведении изм. р-р
+        $("#q3").mouseover(function(){document.getElementById("q3").width='350'; document.getElementById("q3").height='250'});
+		$("#q3").mouseout(function(){document.getElementById("q3").width='250'; document.getElementById("q3").height='150'});
+
+		//при дв.клике рамка
+		$("#q4").dblclick(function(){var border = document.getElementById("q4");
+		border.className = "q41"});
+
+		});
+
+</script>
+<style>
+
+    .q41 {
+        border-top: 4px double red;
+        border-bottom: 4px double blue;
+        border-left: 4px double green;
+        border-right: 4px double black;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>цвет текста при наведении</h1>
+
+<h2>размер шрифта при нажатии</h2>
+
+<img src="1.jpg" width="250px" height="150px" id="q1">
+
+<p id="q2">замена на картинку</p>
+
+<img src="2.jpg" width="250px" height="150px" id="q3">
+
+<p id="q4">граница по двойному клику</p>
+
+</body>
+</html>

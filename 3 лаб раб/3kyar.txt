@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>lab03</title>
+    <script>
+        function fun1() {
+            var p = 3.14, e = 2.5, i = 0;
+            v1 = 6 * Math.pow(p, 2) + 3 * Math.pow(e, 8);//первый элемент массива 
+            v2 = 2 * Math.cos(4) + Math.cos(12) + 8 * Math.pow(e, 8);
+            v3 = 3 * Math.sin(9) + Math.log(5) + Math.sqrt(3);
+            v4 = 2 * Math.tan(5) + 6 * p + Math.sqrt(12);//последний элемент массива 
+
+            massiv = new Array(v1, v2, v3, v4);
+            var max = 0;
+            var min = 999999999999999999999999999;
+            var k = 0;
+            var z = 0;
+            for (i = 0; i < massiv.length; i++) {
+                if (massiv[i] > max) {
+                    max = massiv[i];
+                    k = i;
+                }
+                if (massiv[i] < min) {
+                    min = massiv[i];
+                    z = i;
+                }
+            }
+            document.writeln("Максимальный элемент равен: " + max + " Его номер: " + k);
+            document.writeln("<br/>Минимальный элемент равен: " + min + " Его номер: " + z);
+        }
+        function fun2() {
+            var massFirst = [1, 12, 43, 15, 6], massSecond = [2, 3, 4];
+            var massMain = new Array(), numb1 = 3.9;
+            function forSort(a, b) {
+                return (a > b) ? 1 : (-1);
+            }
+            massMain[0] = Math.pow(9, 2);
+            massMain[1] = Math.round(numb1);
+            massMain[2] = Math.floor(numb1);
+            massMain[3] = massFirst.pop();
+            massMain[4] = massFirst.push(6);
+            massMain[5] = massSecond.shift();
+            massMain[6] = massSecond.slice(0, 2);
+            massMain[7] = massFirst.sort(forSort);
+            document.write('Исходный массив: ' + '<br/>')
+            for (var i = 0; i < massMain.length; i++) {
+                document.write(massMain[i] + '<br/>');
+            }
+            var newArr1 = new Array(), newArr2 = new Array();
+            for (var j = 0, k = 0, i = 0; i < massMain.length; i++) {
+                if (i < 3) {
+                    newArr1[j] = massMain[i];
+                    j++;
+                }
+                else {
+                    newArr2[k] = massMain[i];
+                    k++;
+                }
+            }
+            newArr1.push(Math.round(Math.exp(5) * 10) / 10);
+            document.write('Новый массив Math: ' + '<br/>');
+            for (i = 0; i < newArr1.length; i++) {
+                document.write(newArr1[i] + ', ');
+            }
+            document.write('<br/>' + 'Его длина: ' + newArr1.length);
+            newArr2.push(newArr1.pop());
+            document.write('<br/>' + 'Новый массив Array: ' + '<br/>');
+            for (i = 0; i < newArr2.length; i++) {
+                document.write(newArr2[i] + ', ');
+            }
+            document.write('<br/>' + 'Его  Длина: ' + newArr2.length + '<br/>');
+        }
+        function fun3() {
+            var Fio = new String("Септилко Анастасия Антоновна");
+            document.write(Fio);
+            document.write("<br/>Длина строки: " + Fio.length);
+            var FioLower = new String(Fio.toLowerCase());//нижний регистр 
+            var FioUpper = new String(Fio.toUpperCase());//верхний регистр 
+            document.write("<br/>Строка в нижнем регистре: " + FioLower);
+            document.write("<br/>Строка в верхнем регистре: " + FioUpper);
+            document.write("<br/>");
+            document.write(FioLower.concat(FioUpper));
+            var FioS = new String("САА");
+            
+            var FioSLower = new String(FioS.toLowerCase());
+            var FioSUpper = new String(FioS.toUpperCase());
+            document.write("<br/>Строка в нижнем регистре: " + FioSLower);
+            document.write("<br/>Строка в верхнем регистре: " + FioSUpper);
+            document.write("<br/>Длина строки: " + FioS.length);
+            document.write("<br/>");
+            document.write(FioSLower.concat(FioSUpper));
+            
+        }
+        function fun4() {
+            document.write("<link rel=stylesheet type=text/css href='lab2css.css'/>");
+            document.write("<table border=1>");
+            document.write("<tr>")
+            document.write("<td>" + 'Год' + "</td>");
+            x = new Date();
+            document.write("<td>" + x.getFullYear() + "</td>");
+            document.write("</tr>");
+            document.write("<td>" + 'Месяц' + "</td>");
+            document.write("<td>" + x.getMonth() + "</td>");
+            document.write("</tr>");
+            document.write("<tr>")
+            document.write("<td>" + 'День' + "</td>");
+            document.write("<td>" + x.getDate() + "</td>");
+            document.write("</tr>");
+            document.write("<tr>");
+            document.write("<td>" + 'Час' + "</td>");
+            document.write("<td>" + x.getHours() + "</td>");
+            document.write("</tr>");
+            document.write("<tr>");
+            document.write("<td>" + 'Минута' + "</td>");
+            document.write("<td>" + x.getMinutes() + "</td>");
+            document.write("</tr>");
+            document.write("<tr>");
+            document.write("<td>" + 'Секунда' + "</td>");
+            document.write("<td>" + x.getSeconds() + "</td>");
+            document.write("</tr>");
+            document.write("</table>");
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Задание 1 " onclick="fun1()" />
+    </br>
+    </br>
+    <input type="button" value="Задание 2 " onclick="fun2()" />
+    </br>
+    </br>
+    <input type="button" value="Задание 3 " onclick="fun3()" />
+    </br>
+    </br>
+    <input type="button" value="Задание 4 " onclick="fun4()" />
+    </br>
+    </br>
+</body>
+
+</html>

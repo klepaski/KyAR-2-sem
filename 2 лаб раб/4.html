@@ -1,0 +1,75 @@
+<html>
+<head>
+   <title> Задание 4 (JS)</title> 
+</head>
+<body>
+<script type='text/javascript'>
+    a=new Number (34.21);
+    b=new Number (12.06);
+document.write("<table border= \"1\" cellspacing= \"0\" cellpadding= \"3\"align= \"center\">")
+    document.write("<tr>");
+        document.write("<td>Число</td>");
+        document.write("<td>Метод</td>");
+        document.write("<td>Результат</td>");
+        document.write("<td>Описание метода</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+        document.write("<td>"+a+"</td>");
+        document.write("<td>toExponential(3)</td>");
+        document.write("<td>"+a.toExponential(3)+"</td>");
+        document.write("<td>Число в эксп. форме с 3 цифрами после точки</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+        document.write("<td>"+a+"</td>");
+        document.write("<td>toFixed(3)</td>");
+        document.write("<td>"+a.toFixed(3)+"</td>");
+        document.write("<td>Число в форме с фикс. кол-вом цифр после точкой</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+        document.write("<td>"+a+"</td>");
+        document.write("<td>toPrecision(3)</td>");
+        document.write("<td>"+a.toPrecision(6)+"</td>");
+        document.write("<td>Число с заданным кол-вом цифр</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+        document.write("<td>"+a+"</td>");
+        document.write("<td>toString(16)</td>");
+        document.write("<td>"+a.toString(16)+"</td>");
+        document.write("<td>Строковое представление числа в 16-сс</td>");
+    document.write("</tr>");
+document.write("</table> <br>");
+document.write("<table border= \"1\" cellspacing= \"0\" cellpadding= \"3\"align= \"center\">")
+    document.write("<tr>");
+        document.write("<td>Число</td>");
+        document.write("<td>Метод</td>");
+        document.write("<td>Результат</td>");
+        document.write("<td>Описание метода</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+        document.write("<td>"+b+"</td>");
+        document.write("<td>toExponential(3)</td>");
+        document.write("<td>"+b.toExponential(3)+"</td>");
+        document.write("<td>Число в эксп. форме с 3 цифрами после точки</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+        document.write("<td>"+b+"</td>");
+        document.write("<td>toFixed(3)</td>");
+        document.write("<td>"+b.toFixed(3)+"</td>");
+        document.write("<td>Число в форме с фикс. кол-вом цифр после точкой</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+        document.write("<td>"+b+"</td>");
+        document.write("<td>toPrecision(3)</td>");
+        document.write("<td>"+b.toPrecision(6)+"</td>");
+        document.write("<td>Число с заданным кол-вом цифр</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+        document.write("<td>"+b+"</td>");
+        document.write("<td>toString(16)</td>");
+        document.write("<td>"+b.toString(16)+"</td>");
+        document.write("<td>Строковое представление числа в 16-сс</td>");
+    document.write("</tr>");
+document.write("</table> <br>");
+</script>
+</body>
+</html>

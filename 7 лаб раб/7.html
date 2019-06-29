@@ -1,0 +1,72 @@
+<form name="lab">
+    <fieldset>
+        <textarea>Факультет Информационных технологий</textarea>
+        <br/>
+        <legend>Данные о пользователе</legend> <!--загоовок-->
+            Имя: <br /><input type=text name='name' value="Имя" /><br />
+            Фамилия:<br /> <input type=text name='lastname' value="Фамилия" /><br />
+    </fieldset>
+    <legend>Специальность </legend>
+        <select name="spez">
+            <option> ПОИТ </option>
+            <option> ПОИБМС </option>
+            <option> ИСИТ </option>
+            <option> ДЭВИ </option>
+        </select>
+    <legend>Курс</legend>
+        <input type='radio' name='kurs' value='1' /> 1
+        <input type='radio' name='kurs' value='2' /> 2
+        <input type='radio' name='kurs' value='3' /> 3
+        <input type='radio' name='kurs' value='4' /> 4
+        <input type='radio' name='kurs' value='5' /> 5
+        <br/>
+    <legend> Предметы: </legend>
+        <input type='checkbox' name='oit' value='ОИТ' />ОИТ
+        <input type='checkbox' name='oap' value='ОАП' />ОАП
+        <input type='checkbox' name='his' value='История' />История
+        <input type='checkbox' name='fiz' value='Физика' />Физика
+        <input type='checkbox' name='math' value='Матем' /> Матем
+        <br />
+    <form>
+    <input type="submit" />
+    <input type="reset" />
+
+
+    <script>
+    function fun1() {
+        var print = open();
+        print.document.write('</p>');
+        print.document.write('Студент ' + document.lab.lastname.value + ' ' + document.lab.name.value)
+        print.document.write('Специальность ' + document.lab.spez.value + ', курс ' + document.lab.kurs.value)
+        print.document.write(' должен сдать следующие предметы: ');
+        print.document.write('</p>');
+        print.document.write('<ul>');
+        if (document.lab.oit.checked == true)
+            print.document.write('<li>' + document.lab.oit.value + '</li>');
+        if (document.lab.oap.checked == true)
+            print.document.write('<li>' + document.lab.oap.value + '</li>');
+        if (document.lab.his.checked == true)
+            print.document.write('<li>' + document.lab.his.value + '</li>');
+        if (document.lab.fiz.checked == true)
+            print.document.write('<li>' + document.lab.fiz.value + '</li>');
+        if (document.lab.math.checked == true)
+            print.document.write('<li>' + document.lab.math.value + '</li>');
+        print.document.write('</ul>');
+    
+        print.document.write('<select>');
+        if (document.lab.oit.checked == true)
+            print.document.write('<option>' + document.lab.oit.value + '</option>');
+        if (document.lab.oap.checked == true)
+            print.document.write('<option>' + document.lab.oap.value + '</option>');
+        if (document.lab.his.checked == true)
+            print.document.write('<option>' + document.lab.his.value + '</option>');
+        if (document.lab.fiz.checked == true)
+            print.document.write('<option>' + document.lab.fiz.value + '</option>');
+        if (document.lab.math.checked == true)
+            print.document.write('<option>' + document.lab.math.value + '</option>');
+        print.document.write('</select>');
+    }
+</script>
+<input type="button" value="Напечатать" onclick="fun1()" />
+</form>
+    

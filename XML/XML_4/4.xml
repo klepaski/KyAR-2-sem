@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="4.xslt"?>
+<children>
+	
+	<child>
+		<SURNAME>Чистякова</SURNAME>
+		<NAME>Юлия</NAME>
+		<PASSING>357</PASSING>
+		<YEAR>1998</YEAR>
+    <SR>8</SR>
+	</child>
+
+	<child>
+		<SURNAME>Каспер</SURNAME>
+		<NAME>Наталья</NAME>
+		<PASSING>250</PASSING>
+		<YEAR>2000</YEAR>
+    <SR>6</SR>
+	</child>
+
+	<child>
+		<SURNAME>Септилко</SURNAME>
+		<NAME>Анастасия</NAME>
+		<PASSING>237</PASSING>
+		<YEAR>1999</YEAR>
+    <SR>5</SR>
+	</child>
+  
+  <child>
+    <SURNAME>Федорович</SURNAME>
+    <NAME>Павел</NAME>
+    <PASSING>312</PASSING>
+    <YEAR>2000</YEAR>
+    <SR>6</SR>
+  </child>
+
+  <child>
+    <SURNAME>Жугин</SURNAME>
+    <NAME>Илья</NAME>
+    <PASSING>199</PASSING>
+    <YEAR>2001</YEAR>
+    <SR>4</SR>
+  </child>
+  
+</children>

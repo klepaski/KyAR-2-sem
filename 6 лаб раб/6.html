@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+	<meta charset="utf-8">
+	<title>6</title>
+    <script type="text/javascript">
+        function button1() {    // открыть окно 1
+            win1 = open();
+        }
+        function button2() {    // закрыть окно 1
+            win1.close();
+        }
+        function button3() {    // открыть окно 2
+            win2 = open();
+        }
+        function button4() {    // закрыть окно 2
+            win2.close();
+        }
+        function button5() {    // ввести текст в окно 1
+            win1.document.write("Вы только что ввели текст в это окно 1!");
+        }
+        function button6() {    // ввести текст в окно 2
+            win2.document.write("Вы только что ввели текст в это окно 2!");
+        }
+        function zad2() {
+            document.write("<table border=1>");
+            document.write("<tr><td>Свойство <td> Значение")
+            document.write("<tr><td>Информация о браузере: " + "<td>"+navigator.userAgent);
+            document.write("<tr><td>Версия браузера: " +"<td>"+ navigator.appVersion);
+            document.write("<tr><td>Название браузера: " +"<td>"+ navigator.appName);
+            document.write("<tr><td>Кодовое название браузера: " +"<td>"+ navigator.appCodeName);
+            document.write("<tr><td>ОС, которую использует пользователь: " +"<td>"+ navigator.platform);
+            document.write("<tr><td>Включена ли поддержка Java в браузере: " +"<td>"+ navigator.javaEnabled());
+            document.write("<tr><td>Ширина и высота экрана: " +"<td>"+ screen.width+" x "+screen.height);
+            document.write("<tr><td>Глубина цвета: " +"<td>"+ screen.colorDepth);
+            document.write("<tr><td>URL, которые были посещены в данном окне браузера: " +"<td>"+ history.length);
+            document.write("<tr><td>URL, текущего документа: " +"<td>"+ location.href);
+            document.write("<tr><td>Путь к загруженному документу: " +"<td>"+ location.pathname);
+            document.write("<tr><td>Имя домена загруженного документа: " +"<td>"+ location.host);
+            document.write("</table>")
+        }
+    </script>
+</head>
+<body>
+<input type="button" name="button1" value="Открыть окно 1" onclick="button1()"><br/><br/>
+<input type="button" name="button2" value="Закрыть окно 1" onclick="button2()"><br/><br/>
+<input type="button" name="button3" value="Открыть окно 2" onclick="button3()"><br/><br/>
+<input type="button" name="button4" value="Закрыть окно 2" onclick="button4()"><br/><br/>
+<input type="button" name="button5" value="Ввести текст (1)" onclick="button5()"><br/><br/>
+<input type="button" name="button6" value="Ввести текст (2)" onclick="button6()"><br/><br/><br/><br/><br/><br/>
+<input type="button" name="button5" value="Задание 2" onclick="zad2()">	
+</body>
+</html>

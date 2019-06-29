@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>Задание 1 (JS)</title>
+    <style type="text/css">
+    .button {
+        background-color: rgb(255, 167, 158);
+        border: 2px double rgb(209, 5, 5);
+        }
+    </style>
+<script type='text/javascript'>
+function zad1() {
+    alert('Вас приведствует учебный центр,');
+    x=prompt('Введите ваше имя:','Имя');
+    alert('Добро пожаловать на наши курсы, '+x+'!');
+    y=confirm('Хотите стать web-дизайнером?');
+    if(y==1) {
+        document.write("Учите стили CSS и JavaScript!<br />");
+    }
+    else {
+        document.write("Упускаете время!<br />");
+    }
+}
+function zad2() {
+    a=45; b=11;
+    c=a+b;
+    document.write("<br /> Задание 2 <br /> Результат сложения чисел: "+a+" и "+b+" равен - "+c+".<br />");
+    
+    a="Live"; b="Perfectly";
+    c=a+b;
+    document.write("Результат сложения строк: "+a+" и "+b+" равен - "+c+".<br />");
+    
+    a=3; b="attempts";
+    c=a+b;
+    document.write("Результат сложения числа и строки: "+a+" и "+b+" равен - "+c+".<br />");
+   
+    a="Year"; b=2018;
+    c=a+b;
+    document.write("Результат сложения строки и числа: "+a+" и "+b+" равен - "+c+".<br />");
+    document.write("Результатом сложения строки и числа всегда будет строка!");
+
+}
+function zad3() {
+    x=2; y=298;
+    z=(8*y/x+5*x/y)*6;
+    document.write("x = "+x+", y = "+y+". <br />");
+    document.write("Вычислить (8y/x + 5x/y)*6 <br />");
+    document.write("Результат равен - "+z+".<br />");
+   
+    x=4; y=80;
+    z1=(35*y-25*x)/5+232 ;
+    document.write("<br>x = "+x+", y = "+y+". <br />");
+    document.write("Вычислить (35y - 25x)/5 + 232 <br />");
+    document.write("Результат равен - "+z1+".<br />");
+    document.write("Остаток от деления первого выражения на второе равен "+(z%z1));
+}
+function zad4() {
+    w=prompt("Введите число:");
+    if((w<20||w>40)&&(w!=15)&&(w%5==0))
+        alert("Правильное значение.");
+    else 
+        alert ("Не правильно!!!");
+        s=prompt("Введите число:");
+        if (s>10)
+            alert("Число больше 10!");
+        else 
+            alert("Число меньше 10!");
+}
+function zad5() {
+    a=prompt('Введите число А:');
+    b=prompt('Введите число Б:');
+    if(a>b)
+        alert("А больше Б");
+    else 
+        alert("А меньше Б");
+    kol=prompt("Введите ожидаемое количество посетителей сайта:");
+    kol1=prompt("Введите реальное количество посетителей сайта:");
+    kol<kol1? alert("Поздравляю!"):alert("Все еще впереди!");
+}
+function zad6() {
+    choice=prompt("Введите сокращенное название дня недели:");
+    switch(choice){
+    case 'пн':document.write("Это понедельник.");break;
+    case 'вт':document.write("Это вторник."+"<br \/>"); break;
+    case 'ср':document.write("Это среда."+"<br \/>"); break;
+    case 'чт':document.write("Это четверг."+"<br \/>"); break;
+    case 'пт':document.write("Это пятница."+"<br \/>"); break;
+    case 'сб':document.write("Это суббота."+"<br \/>"); break;
+    case 'вс':document.write("Это воскресенье."+"<br \/>"); break;
+    default:document.write("Вы ввели неправильное обозначение!"+"<br\/>");break;
+    }
+}
+function zad7() {
+    try{
+        alert("Задания закончены, на этом первая лабораторная подходит к концу.");
+        LOL;
+        alert('привет');
+        }
+    catch (err){
+        alert("В задании была совершена ошибка. "+err.name);
+        }
+}
+</script>
+</head>
+<body>
+    <input type='button' value='№1' onclick='zad1()' class='button' />
+    <input type='button' value='№2' onclick='zad2()' class='button'/>
+    <input type='button' value='№3' onclick='zad3()' class='button'/>
+    <input type='button' value='№4' onclick='zad4()' class='button'/>
+    <input type='button' value='№5' onclick='zad5()' class='button'/>
+    <input type='button' value='№6' onclick='zad6()' class='button'/>
+    <input type='button' value='№7' onclick='zad7()' class='button'/>
+</body>
+</html>

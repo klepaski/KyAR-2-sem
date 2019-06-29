@@ -1,0 +1,106 @@
+<html>
+
+<head>
+<meta charset="UTF-8" />
+<script>
+var Gruppa = function(num, spec, kolich, x, y) {//крч здесь ты создаешь объекты
+this.num = num;
+this.spec = spec;
+this.x = x;
+this.y = y;
+this.kolich = kolich;
+this.add_stud = function add_stud(x) {
+document.write("В группу " + this.num + ' добавили ' + this.x + ' студентов.<br\>');
+}
+this.sub_stud = function sub_stud(y) {
+document.write("Из группы " + this.num + ' отчислено ' + this.y + ' студентов.<br\>');
+}
+}
+
+var gr1 = new Gruppa(2, 'ИСИТ', 28, 2, 5);//эти 4 штуки это сами объекты, а те штуки в скобках это свойства, ты их перечисляла в верху, а здесь просто пишешь эти параметы
+var gr2 = new Gruppa(3, 'ПОИТ', 32, 3, 1);
+var gr3 = new Gruppa(4, 'ДЭВИ', 25, 4, 0);
+var gr4 = new Gruppa(5, 'ПОИБМС', 30, 0, 2);
+
+
+function Product(name, del_date, delicious, healthful, amount_firstm, amount_secondm, amount_thirdm) {//здесь придумай своё, потому что потому что
+this.name = name;
+this.del_date = del_date;
+this.delicious = delicious;
+this.fresh = true; // здесь тру для всех объектов используется, поэтому это свойство мы не пишем в аргумент функции
+this.healthful = healthful;
+this.amount_firstm = amount_firstm;
+this.amount_secondm = amount_secondm;
+this.amount_thirdm = amount_thirdm;
+this.z = av(this.amount_firstm,this.amount_secondm,this.amount_thirdm);
+}
+var Potato = new Product("'Картошка' ", "28.02.2018", "вкусная", "нейтральная", 65, 24, 95);
+var Lays = new Product("'Чипсы лэйз'", "20.02.2018", "вкусные", "вредные", 88, 449, 879);
+var Sprite = new Product("'Вода газированная спрайт'", "16.02.2018", "вкусная", "вредная", 84, 58, 89);
+function fun1() {
+document.write(" В группе номер " + gr1.num + " специальности ", gr1.spec + " ", gr1.kolich + " студентов " + "<br/>");
+gr1.add_stud(gr1.x)
+gr1.sub_stud(gr1.y)
+document.write(" <br/>В группе номер " + gr2.num + " специальности ", gr2.spec + " ", gr2.kolich + " студентов " + "<br/>");
+gr2.add_stud(gr2.x)
+gr2.sub_stud(gr2.y)
+document.write(" <br/>В группе номер " + gr3.num + " специальности ", gr3.spec + " ", gr3.kolich + " студентов " + "<br/>");
+gr3.add_stud(gr3.x)
+gr3.sub_stud(gr3.y)
+document.write(" <br/>В группе номер " + gr4.num + " специальности ", gr4.spec + " ", gr4.kolich + " студентов " + "<br/>");
+gr4.add_stud(gr4.x)
+gr4.sub_stud(gr4.y)
+}
+function av(a,b,c){
+return (a+b+c)/3;
+}
+function fun2() {
+document.write("Продукт: " + Potato.name + " Привезен: "+ Potato.del_date +" Как на на вкус? -" +Potato.delicious +" Cвежая? " +Potato.fresh + " полезная? " + Potato.healthful, " В среднем за три месяца было(шт.) "+Potato.z+"<br/><br/>");
+document.write("Продукт: " + Sprite.name + " Привезен: "+ Sprite.del_date +" Как на на вкус? -" +Sprite.delicious +" Cвежая? " +Sprite.fresh + " полезная? " + Sprite.healthful, " В среднем за три месяца было(шт.) "+Sprite.z+"<br/><br/>");
+document.write("Продукт: " + Lays.name + " Привезен: "+ Lays.del_date +" Как на на вкус? -" +Lays.delicious +" Cвежая? " +Lays.fresh + " полезная? " + Lays.healthful, " В среднем за три месяца было(шт.) "+Lays.z+"<br/><br/>");
+}
+function fun3(){
+var MyStr = new String('ascbn');
+var MyArr = new Array(1,2,3,4,5,6,7,8,9,0);
+document.write("Исходный массив: " +MyArr);
+delete MyArr[2];
+document.write("<br/>Новый массив c удаленным третьм элементом: " + MyArr+ "<br/><br/>");
+document.write("Имеется ли '2' в массиве? " + (3 in MyArr) + "<br/>");
+document.write("Имеется ли метод 'spec' в объекте 'gr1'? " + ('spec' in gr1 )+ "<br/>");
+document.write("Имеется ли метод 'abc' в объекте 'Lays'? " + ('abc' in Lays)+ "<br/><br/>" );
+document.write("Является 'gr2' объектом? " + (gr2 instanceof Object)+ "<br/>" );
+document.write("Является 'MyArr' массивом? " + (MyArr instanceof Array)+ "<br/>" );
+document.write("Является 'Mystr' строкой? " + (MyStr instanceof String)+ "<br/><br/>" );
+function x2(){
+var i=5;
+return i;
+}
+document.write(x2());
+document.write("<br/><br/>"+"Проверка типа данных: " + typeof MyArr +"<br/>" );
+document.write("<br/><br/>"+"Проверка типа данных: " + typeof x2 +"<br/>" );
+document.write("<br/><br/>"+"Проверка типа данных: " + typeof Potato +"<br/>" );
+document.write("<br/><br/>"+"Проверка типа данных: " + typeof Lays +"<br/>" );
+document.write("<br/><br/>"+"Проверка типа данных: " + typeof Sprite +"<br/>" );
+document.write("<br/><br/>"+"Проверка типа данных: " + typeof gr1 +"<br/>" );
+document.write("<br/><br/>"+"Проверка типа данных: " + typeof gr2 +"<br/>" );
+document.write("<br/><br/>"+"Проверка типа данных: " + typeof gr3 +"<br/>" );
+document.write("<br/><br/>"+"Проверка типа данных: " + typeof gr4 +"<br/>" );
+document.write("<br/><br/>"+"Проверка типа данных: " + typeof MyStr +"<br/>" );
+
+}
+</script>
+</head>
+<body>
+<input type="button" value="Задание 1 " onclick="fun1()" />
+<br/>
+<br/>
+<input type="button" value="Задание 2 " onclick="fun2()" />
+<br/>
+<br/>
+<input type="button" value="Задание 3 " onclick="fun3()" />
+<br/>
+<br/>
+
+</body>
+
+</html>

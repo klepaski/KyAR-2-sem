@@ -1,0 +1,35 @@
+<html>
+<body>
+    <svg width="1366" height="768">
+
+        <!--Солнце-->
+        <circle cy="70" cx="100" r="50" fill="salmon" stroke="pink" stroke-width="10" >
+
+            <!--Ох 100-200 за 3 сек и обратно-->
+            <animate attributeName="cx" from="100" to="200" dur="3s" />
+            <animate attributeName="cx" from="200" to="100" dur="3s" begin="3s" />
+
+            <!--Радиус 50-0 за 3 сек и обратно-->
+            <animate attributeName="r" from="50" to="0" dur="3s" />
+            <animate attributeName="r" from="0" to="50" dur="3s" begin="3s" /> 
+
+            <!--Контур 5-100 за 3 сек и обратно-->
+            <animate attributeName="stroke-width" from="5" to="100" dur="3s" />
+            <animate attributeName="stroke-width" from="100" to="5" dur="3s" begin="3s" />
+
+            <!--Контур распадается за 3 сек и обратно-->
+            <animate attributeName="stroke-dasharray" from="5" to="500" dur="3s" />
+            <animate attributeName="stroke-dasharray" from="500" to="5" dur="3s" begin="3s" />
+        
+        </circle>
+        <defs>
+            <!--Задаем объект cam-->
+            <path id="cam" d="M29.688 59.375c0 11.218 9.094 20.313 20.313 20.313s20.313-9.094 20.313-20.313-9.094-20.313-20.313-20.313-20.313 9.094-20.313 20.313zM93.75 25h-21.875c-1.563-6.25-3.125-12.5-9.375-12.5h-25c-6.25 0-7.813 6.25-9.375 12.5h-21.875c-3.438 0-6.25 2.813-6.25 6.25v56.25c0 3.438 2.813 6.25 6.25 6.25h87.5c3.438 0 6.25-2.813 6.25-6.25v-56.25c0-3.438-2.813-6.25-6.25-6.25zM50 87.109c-15.317 0-27.734-12.417-27.734-27.734 0-15.317 12.417-27.734 27.734-27.734 15.318 0 27.734 12.417 27.734 27.734 0 15.318-12.417 27.734-27.734 27.734zM93.75 43.75h-12.5v-6.25h12.5v6.25z"/>
+        </defs>
+        <use xlink:href="#cam" cy="50" cx="50" x="70" y="200" fill="red">
+            <animateTransform attributeName="transform" type="scale" from="1" to="1.5" dur="1s" />
+            <animateTransform attributeName="transform" type="scale" from="1.5" to="1" dur="1s" begin="1s" />
+        </use>
+    </svg>
+</body>
+</html>

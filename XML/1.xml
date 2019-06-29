@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--333 (без css)
+<?xml-stylesheet type="text/xsl" href="1.xslt"?>
+-->
+<?xml-stylesheet type="text/css" href="1.css"?>
+<!--222 (+css)
+<!DOCTYPE note SYSTEM "1.dtd">
+-->
+<!--222 (внутри FACULTY +css):
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="SHEMA.xsd"
+-->
+<FACULTY>
+  <University>
+    <NAME>БГТУ</NAME>
+    <BALL>278</BALL>
+		<NABOR>30/45</NABOR>
+    <CITY>Минск</CITY>
+		</University>
+  
+  <University>
+			<NAME>БрГТУ</NAME>
+			<BALL>290</BALL>
+      <NABOR>30/35</NABOR>
+			<CITY>Брест</CITY>
+	</University>
+
+  <University>
+			<NAME>БГУИР</NAME>
+			<BALL>360</BALL>
+			<NABOR>20/45</NABOR>
+			<CITY>Минск</CITY>
+	</University>
+  
+  <University>
+			<NAME>Ляховичский аграрный колледж</NAME>
+			<BALL>322</BALL>
+			<NABOR>23/45</NABOR>
+			<CITY>Ляховичи</CITY>
+	</University>
+  
+</FACULTY>

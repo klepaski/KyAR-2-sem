@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>9.1</title>
+   <style type="text/css">
+   		#txt {
+               cursor: pointer;
+               color: red;
+   		     }
+   </style>
+</head>
+<body>
+   <span id="txt">ЧИСТЯКОВА ЮЛИЯ</span>
+   <script type="text/javascript">
+   
+        var txt = document.getElementById('txt'); //по id txt
+        
+        txt.onmousedown = function(e) { //при нажатии
+
+            //разместить в абсолютных координатах
+            txt.style.position = 'absolute';
+            moveAt(e);
+
+            //передвинуть под координаты курсора
+            function moveAt(e) {
+                txt.style.left = e.pageX - txt.offsetWidth / 2 + 'px';
+                txt.style.top = e.pageY - txt.offsetHeight / 2 + 'px';
+            }
+
+            //перемещение по экрану
+            document.onmousemove = function(e) {
+                moveAt(e);
+            }
+
+            //окончание перемещения
+            txt.onmouseup = function() {
+                document.onmousemove = null;
+                txt.onmouseup = null;
+            }
+        }
+   </script>
+</body>
+</html>

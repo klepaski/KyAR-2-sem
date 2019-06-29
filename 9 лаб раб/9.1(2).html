@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>9.1(2)</title>
+</head>
+<body>
+    <img src="1.jpg" id="gizmo">
+
+    <script type="text/javascript">
+        var gizmo = document.getElementById('gizmo');
+        
+        gizmo.onmousedown = function (e) {// нажатие
+
+            //разместить в абсолютных координатах
+            gizmo.style.position = 'absolute';
+            moveAt(e);
+
+            //передвинуть под координаты курсора
+            //pageX - гориз.коорд. мыши, offsetWidth - ширина 1.jpg
+            function moveAt(e) {
+                gizmo.style.left = e.pageX -gizmo.offsetWidth / 2 + 'px';
+                gizmo.style.top = e.pageY - gizmo.offsetHeight / 2 + 'px';
+            }
+
+            //перемещение по экрану
+            document.onmousemove = function (e) {
+                moveAt(e);
+            }
+
+            //окончание перемещения
+            gizmo.onmouseup = function () {
+                document.onmousemove = null;
+                gizmo.onmouseup = null;
+            }
+
+            gizmo.ondragstart = function () {
+                return false;
+            };
+        }
+
+    </script>
+
+</body>
+</html>

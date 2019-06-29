@@ -1,0 +1,105 @@
+﻿body {
+	background-image: url(fon.jpg);
+	background-position: center top;
+	background-attachment: fixed;
+	color: IndianRed;
+	text-align: center;
+}
+H1 {
+	color: inherit;
+	font-size: 200%;
+	font-family: Arial, Verdana, sans-serif;
+	font-style: italic;
+	text-align: inherit;
+}
+
+H2 {
+	color: Salmon;
+	text-decoration: blink;
+	font-size: 200%;
+	font-family: "Monotype Corsiva", cursive;
+	font-style: italic;
+	text-align: inherit;
+}
+H3 {
+	color: inherit;
+	font-size: 190%;
+	font-family: "Mistral", cursive;
+	font-style: italic;
+	text-align: left
+}
+
+block1 P{
+	color: brown;
+	border: 2px solid red;
+	padding: 3px;
+	text-decoration: underline;
+}
+block2 P{
+	background-color: rgb(255, 171, 162);
+	color: rgb(134, 19, 6);
+	border: 4px double green;
+	padding: 4px;
+}
+
+P {
+	padding-left: 20px !important;
+}
+
+UL {
+	list-style-type: square;
+	color: inherit;
+	font-size: 150%;
+	font-family: "Mistral", cursive;
+	font-style: italic;
+	text-align: left;
+}
+OL1 {
+	list-style-type: lower-latin;
+	color: MediumSlateBlue;
+	font-size: 100%;
+	font-family: "Monotype Corsiva", cursive;
+	font-style: oblique;
+	text-align: inherit;
+}
+OL2 {
+	list-style-type: upper-roman;
+	color: Red;
+	font-size: 140%;
+	font-family: "Mistral", cursive;
+	font-style: normal;
+	text-align: left;
+}
+OL3 {
+	list-style-image: url(список.png);
+	color: DeepPink;
+	font-size: 170%;
+	font-family: "Monotype Corsiva", cursive;
+	font-style: normal;
+	text-align: left;
+}
+a {display: block;}
+A:link { 
+    	color: #036;
+   	}
+A:hover { 
+   	color: #ff0;
+	}
+A:hover:first-letter {color: red;}
+ a:before {
+      content:"студентка 1 курса"
+      }
+    a:after {
+      content: "проживающая по адресу г. Брест, ул. Колесника";
+      }
+
+TR.a {background: lightsalmon}
+.b {background: gold;
+    font-style: italic}
+.c {background: yellow;
+    font-weight: 900}
+.d {background: palegreen;
+    font-style: oblique}
+.e {background: lightcyan;
+    font-family: "Monotype Corsiva", cursive;
+    font-size: 130%}
